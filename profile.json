@@ -1,0 +1,166 @@
+{
+  "min_score": 40,
+  "resume_summary": "PhD candidate (defends Dec 2026), Biomedical Sciences & Public Health, Icahn School of Medicine at Mount Sinai. Decade of experience in oncology, immunology, multi-omics genomics (RNA-seq, ATAC-seq, CUT&RUN). Applied mathematics and biostatistics background; authors statistical analysis plans. Hands-on PyTorch/transformer engineering, models from scratch, GCP/AWS. 8 peer-reviewed publications including Nature Communications, Nature Cancer, Genes & Development; co-author on a community benchmark evaluating ML deconvolution methods. No prior full-time industry experience. Based in Brooklyn, NY; open to NYC metro, NJ pharma belt, and remote.",
+  "skills": [
+    "Python",
+    "R",
+    "PyTorch",
+    "machine learning",
+    "deep learning",
+    "transformer",
+    "RNA-seq",
+    "ATAC-seq",
+    "CUT&RUN",
+    "single-cell",
+    "multi-omics",
+    "genomics",
+    "bioinformatics",
+    "biostatistics",
+    "statistics",
+    "immunology",
+    "oncology",
+    "cancer",
+    "epigenetics",
+    "AWS",
+    "GCP",
+    "Docker",
+    "SQL",
+    "HPC",
+    "pipeline",
+    "reproducib",
+    "real-world data",
+    "real-world evidence",
+    "EHR",
+    "clinical trial",
+    "benchmark",
+    "evaluation"
+  ],
+  "locations_good": [
+    "new york",
+    "nyc",
+    "brooklyn",
+    "manhattan",
+    "remote",
+    "tarrytown",
+    "new jersey",
+    " nj",
+    "hybrid"
+  ],
+  "locations_ok": [
+    "united states",
+    "us",
+    "usa",
+    "boston",
+    "cambridge",
+    "philadelphia",
+    "connecticut",
+    "northeast",
+    "multiple"
+  ],
+  "exclude_title_keywords": [
+    "sales",
+    "account executive",
+    "recruiter",
+    "intern",
+    "technician",
+    "nurse",
+    "attorney",
+    "marketing",
+    "controller",
+    "administrative",
+    "facilities"
+  ],
+  "lanes": {
+    "L1": {
+      "label": "computational biology",
+      "title_keywords": [
+        "computational biolog",
+        "bioinformatic",
+        "genomic",
+        "scientist, computational",
+        "staff scientist"
+      ],
+      "body_keywords": [
+        "rna-seq",
+        "single-cell",
+        "multi-omics",
+        "genomics",
+        "bioinformatics",
+        "sequencing",
+        "transcriptom",
+        "variant",
+        "atac-seq",
+        "immunolog",
+        "oncolog"
+      ]
+    },
+    "L2": {
+      "label": "ML / techbio",
+      "title_keywords": [
+        "machine learning",
+        "ml scientist",
+        "research scientist",
+        "ai scientist",
+        "deep learning"
+      ],
+      "body_keywords": [
+        "pytorch",
+        "machine learning",
+        "deep learning",
+        "foundation model",
+        "neural network",
+        "training",
+        "model architecture",
+        "representation learning",
+        "transformer"
+      ]
+    },
+    "L3": {
+      "label": "real-world evidence / quantitative",
+      "title_keywords": [
+        "quantitative scientist",
+        "biostatistician",
+        "epidemiolog",
+        "real-world",
+        "rwe",
+        "health data",
+        "data scientist"
+      ],
+      "body_keywords": [
+        "real-world data",
+        "real-world evidence",
+        "ehr",
+        "claims",
+        "statistical analysis plan",
+        "epidemiolog",
+        "biostatistic",
+        "cohort",
+        "retrospective",
+        "observational",
+        "regulatory"
+      ]
+    },
+    "L4": {
+      "label": "AI lab / evaluation",
+      "title_keywords": [
+        "research scientist",
+        "evaluation",
+        "evals",
+        "biosecurity",
+        "domain expert",
+        "technical staff"
+      ],
+      "body_keywords": [
+        "evaluation",
+        "benchmark",
+        "red team",
+        "model behavior",
+        "alignment",
+        "safety",
+        "biosecurity",
+        "domain expert",
+        "frontier model"
+      ]
+    }
+  }
+}

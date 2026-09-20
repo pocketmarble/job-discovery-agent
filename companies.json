@@ -1,0 +1,399 @@
+[
+  {
+    "name": "Immunai",
+    "lane": "L1",
+    "ladder": "startup",
+    "watch_titles": "Computational Biologist, Scientist Computational Biology, Bioinformatics Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "immunai"
+    ]
+  },
+  {
+    "name": "Regeneron",
+    "lane": "L1",
+    "ladder": "big_pharma",
+    "watch_titles": "Senior Scientist Computational Biology, Bioinformatics Scientist, Postdoctoral Fellow",
+    "loc": "Tarrytown, NY",
+    "ats_candidates": [
+      "regeneron"
+    ]
+  },
+  {
+    "name": "Pfizer",
+    "lane": "L1",
+    "ladder": "big_pharma",
+    "watch_titles": "Senior Scientist, Computational Biology, Postdoctoral Fellow",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "pfizer"
+    ]
+  },
+  {
+    "name": "Kallyope",
+    "lane": "L1",
+    "ladder": "startup",
+    "watch_titles": "Scientist Computational Biology, Bioinformatics Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "kallyope"
+    ]
+  },
+  {
+    "name": "Volastra Therapeutics",
+    "lane": "L1",
+    "ladder": "startup",
+    "watch_titles": "Scientist Computational Biology, Bioinformatics",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "volastra",
+      "volastratherapeutics"
+    ]
+  },
+  {
+    "name": "New York Genome Center",
+    "lane": "L1",
+    "ladder": "academic",
+    "watch_titles": "Bioinformatics Scientist, Computational Biologist, Staff Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "nygenome",
+      "newyorkgenomecenter",
+      "nygc"
+    ]
+  },
+  {
+    "name": "CZ Biohub New York",
+    "lane": "L1",
+    "ladder": "academic",
+    "watch_titles": "Scientist, Computational Biologist, Research Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "czbiohub",
+      "chanzuckerberg"
+    ]
+  },
+  {
+    "name": "Flatiron Institute",
+    "lane": "L1",
+    "ladder": "academic",
+    "watch_titles": "Research Fellow, Data Scientist, Research Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "simonsfoundation",
+      "flatironinstitute"
+    ]
+  },
+  {
+    "name": "Memorial Sloan Kettering",
+    "lane": "L1",
+    "ladder": "academic",
+    "watch_titles": "Staff Scientist, Computational Biologist, Bioinformatics",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "mskcc",
+      "sloankettering"
+    ]
+  },
+  {
+    "name": "Bristol Myers Squibb",
+    "lane": "L1",
+    "ladder": "big_pharma",
+    "watch_titles": "Senior Scientist, Computational Biology, Postdoctoral",
+    "loc": "Summit, NJ",
+    "ats_candidates": [
+      "bristolmyerssquibb",
+      "bms"
+    ]
+  },
+  {
+    "name": "Merck",
+    "lane": "L1",
+    "ladder": "big_pharma",
+    "watch_titles": "Senior Scientist, Computational Biology, Postdoctoral Research Fellow",
+    "loc": "Rahway, NJ",
+    "ats_candidates": [
+      "merck"
+    ]
+  },
+  {
+    "name": "Novartis",
+    "lane": "L1",
+    "ladder": "big_pharma",
+    "watch_titles": "Senior Scientist, Computational Biology, Postdoc",
+    "loc": "East Hanover, NJ",
+    "ats_candidates": [
+      "novartis"
+    ]
+  },
+  {
+    "name": "Genmab",
+    "lane": "L1",
+    "ladder": "big_pharma",
+    "watch_titles": "Scientist Computational Biology, Bioinformatics",
+    "loc": "Princeton, NJ",
+    "ats_candidates": [
+      "genmab"
+    ]
+  },
+  {
+    "name": "EvolutionaryScale",
+    "lane": "L2",
+    "ladder": "startup",
+    "watch_titles": "Research Scientist, Machine Learning Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "evolutionaryscale"
+    ]
+  },
+  {
+    "name": "Prescient Design (Genentech)",
+    "lane": "L2",
+    "ladder": "big_pharma",
+    "watch_titles": "Machine Learning Scientist, Research Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "genentech",
+      "roche"
+    ]
+  },
+  {
+    "name": "Schrodinger",
+    "lane": "L2",
+    "ladder": "startup",
+    "watch_titles": "Scientist, Applications Scientist, Machine Learning",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "schrodinger"
+    ]
+  },
+  {
+    "name": "Isomorphic Labs",
+    "lane": "L2",
+    "ladder": "startup",
+    "watch_titles": "Research Scientist, Machine Learning Scientist",
+    "loc": "New York / London",
+    "ats_candidates": [
+      "isomorphiclabs"
+    ]
+  },
+  {
+    "name": "Proxima (VantAI)",
+    "lane": "L2",
+    "ladder": "startup",
+    "watch_titles": "Machine Learning Scientist, Computational Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "vantai",
+      "proxima"
+    ]
+  },
+  {
+    "name": "Insilico Medicine",
+    "lane": "L2",
+    "ladder": "startup",
+    "watch_titles": "Research Scientist AI, Computational Biologist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "insilicomedicine",
+      "insilico"
+    ]
+  },
+  {
+    "name": "Formation Bio",
+    "lane": "L2",
+    "ladder": "startup",
+    "watch_titles": "Data Scientist, Machine Learning Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "formationbio",
+      "trialspark"
+    ]
+  },
+  {
+    "name": "Recursion",
+    "lane": "L2",
+    "ladder": "startup",
+    "watch_titles": "Machine Learning Scientist, Computational Biologist",
+    "loc": "Remote / SLC",
+    "ats_candidates": [
+      "recursion",
+      "recursionpharmaceuticals"
+    ]
+  },
+  {
+    "name": "Insitro",
+    "lane": "L2",
+    "ladder": "startup",
+    "watch_titles": "Machine Learning Scientist, Computational Biologist",
+    "loc": "Remote / SSF",
+    "ats_candidates": [
+      "insitro"
+    ]
+  },
+  {
+    "name": "Noetik",
+    "lane": "L2",
+    "ladder": "startup",
+    "watch_titles": "ML Scientist, Computational Biologist",
+    "loc": "Remote / SF",
+    "ats_candidates": [
+      "noetik"
+    ]
+  },
+  {
+    "name": "Arc Institute",
+    "lane": "L2",
+    "ladder": "academic",
+    "watch_titles": "Research Scientist, Fellow",
+    "loc": "Palo Alto, CA",
+    "ats_candidates": [
+      "arcinstitute"
+    ]
+  },
+  {
+    "name": "Flatiron Health",
+    "lane": "L3",
+    "ladder": "startup",
+    "watch_titles": "Quantitative Scientist, Research Scientist, Biostatistician",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "flatironhealth",
+      "flatiron"
+    ]
+  },
+  {
+    "name": "Aetion",
+    "lane": "L3",
+    "ladder": "startup",
+    "watch_titles": "Scientist, RWE Analyst, Epidemiologist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "aetion"
+    ]
+  },
+  {
+    "name": "Medidata",
+    "lane": "L3",
+    "ladder": "big_pharma",
+    "watch_titles": "Data Scientist, Biostatistician",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "medidata",
+      "dassaultsystemes"
+    ]
+  },
+  {
+    "name": "H1",
+    "lane": "L3",
+    "ladder": "startup",
+    "watch_titles": "Data Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "h1insights",
+      "h1"
+    ]
+  },
+  {
+    "name": "Komodo Health",
+    "lane": "L3",
+    "ladder": "startup",
+    "watch_titles": "Data Scientist, Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "komodohealth"
+    ]
+  },
+  {
+    "name": "Tempus",
+    "lane": "L3",
+    "ladder": "startup",
+    "watch_titles": "Bioinformatics Scientist, Quantitative Scientist, Data Scientist",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "tempus",
+      "tempusai",
+      "tempuslabs"
+    ]
+  },
+  {
+    "name": "Datavant",
+    "lane": "L3",
+    "ladder": "startup",
+    "watch_titles": "Data Scientist",
+    "loc": "Remote",
+    "ats_candidates": [
+      "datavant"
+    ]
+  },
+  {
+    "name": "ConcertAI",
+    "lane": "L3",
+    "ladder": "startup",
+    "watch_titles": "RWE Scientist, Clinical Data Scientist",
+    "loc": "Remote",
+    "ats_candidates": [
+      "concertai"
+    ]
+  },
+  {
+    "name": "OpenAI",
+    "lane": "L4",
+    "ladder": "startup",
+    "watch_titles": "Research Scientist, Member of Technical Staff, Evaluation",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "openai"
+    ]
+  },
+  {
+    "name": "Anthropic",
+    "lane": "L4",
+    "ladder": "startup",
+    "watch_titles": "Research Scientist, Biosecurity, Model Evaluation",
+    "loc": "New York, NY",
+    "ats_candidates": [
+      "anthropic"
+    ]
+  },
+  {
+    "name": "FutureHouse",
+    "lane": "L4",
+    "ladder": "startup",
+    "watch_titles": "Research Scientist",
+    "loc": "Remote",
+    "ats_candidates": [
+      "futurehouse"
+    ]
+  },
+  {
+    "name": "10x Genomics",
+    "lane": "Adjacent",
+    "ladder": "startup",
+    "watch_titles": "Field Application Scientist",
+    "loc": "NYC territory",
+    "ats_candidates": [
+      "10xgenomics"
+    ]
+  },
+  {
+    "name": "Illumina",
+    "lane": "Adjacent",
+    "ladder": "big_pharma",
+    "watch_titles": "Field Application Scientist",
+    "loc": "NYC territory",
+    "ats_candidates": [
+      "illumina"
+    ]
+  },
+  {
+    "name": "Parse Biosciences",
+    "lane": "Adjacent",
+    "ladder": "startup",
+    "watch_titles": "Field Application Scientist",
+    "loc": "NYC territory",
+    "ats_candidates": [
+      "parsebiosciences"
+    ]
+  }
+]

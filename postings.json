@@ -1,0 +1,92 @@
+[
+  {
+    "id": "regeneron-senior-scientist-compbio",
+    "company": "Regeneron",
+    "title": "Senior Scientist, Computational Biology",
+    "location": "Tarrytown, NY",
+    "description": "PhD in computational biology, genomics, bioinformatics or a related field with 0-2 years of experience. You will analyze RNA-seq and ATAC-seq data, build reproducible pipelines in Python and R, and deploy analyses on AWS. Focus areas include immunology and oncology target discovery.",
+    "human_label": 95,
+    "human_note": "Big-pharma ladder: Senior Scientist IS the fresh-PhD rung. PhD 0-2 stated explicitly. Commutable. Near-perfect."
+  },
+  {
+    "id": "flatiron-quantitative-scientist",
+    "company": "Flatiron Health",
+    "title": "Quantitative Scientist",
+    "location": "New York, NY",
+    "description": "Work as a member of the Quantitative Sciences team answering questions in cancer using a large real-world dataset. Develop analysis plans, write statistical analysis plans, and produce publication-ready methods and results. You hold a Master's degree with 4 years of industry experience or a PhD (or equivalent) in a quantitative discipline such as biostatistics, epidemiology, applied statistics or health economics. You have experience working in machine learning. EHR-derived real-world data, retrospective oncology cohort studies.",
+    "human_label": 92,
+    "human_note": "PhD-or-equivalent with no industry-years demand for the PhD branch. SAP authorship and oncology map one-to-one."
+  },
+  {
+    "id": "evolutionaryscale-research-scientist-ml",
+    "company": "EvolutionaryScale",
+    "title": "Research Scientist, Machine Learning",
+    "location": "New York, NY",
+    "description": "Train protein foundation models at scale. Deep experience with PyTorch, transformer architectures, large-scale distributed training, and representation learning. PhD or equivalent research experience with a strong publication record.",
+    "human_label": 84,
+    "human_note": "Lane 2 bullseye on paper; publications substitute for industry years. Discounted because ML research bar is high and his ML evidence is still thin."
+  },
+  {
+    "id": "immunai-computational-biologist",
+    "company": "Immunai",
+    "title": "Computational Biologist",
+    "location": "New York, NY (Hybrid)",
+    "description": "PhD required. Analyze single-cell multi-omics data for immuno-oncology and autoimmune disease research in partnership with pharma and academic collaborators. Python, R, reproducible analysis, clear scientific communication.",
+    "human_label": 88,
+    "human_note": "Startup ladder, unmodified Scientist title = entry rung. Closest company-to-profile match on the target list."
+  },
+  {
+    "id": "tempus-bioinformatics-scientist-i",
+    "company": "Tempus",
+    "title": "Bioinformatics Scientist I",
+    "location": "Chicago, IL",
+    "description": "PhD, or MS with 2 years of experience. Build and maintain NGS pipelines, variant calling, and analysis of oncology sequencing data at scale.",
+    "human_label": 70,
+    "human_note": "Right rung and right domain, but Chicago-based. Would need remote flexibility."
+  },
+  {
+    "id": "openai-research-scientist-bio-evals",
+    "company": "OpenAI",
+    "title": "Research Scientist, Biology Evaluations",
+    "location": "San Francisco, CA",
+    "description": "Design benchmark and evaluation suites measuring frontier model capabilities in biology. PhD in the life sciences. Experience with red team exercises, model behavior analysis, and rigorous measurement design.",
+    "human_label": 68,
+    "human_note": "Content fit is excellent (DREAM benchmarking is a direct credential) but SF-based and extremely competitive."
+  },
+  {
+    "id": "immunai-principal-scientist",
+    "company": "Immunai",
+    "title": "Principal Scientist, Computational Biology",
+    "location": "New York, NY",
+    "description": "Design and deploy state-of-the-art computational pipelines and agentic workflows across industry partnerships. PhD with 8-10 years of relevant experience in single-cell multi-omics and immuno-oncology, plus demonstrated leadership of large initiatives.",
+    "human_label": 8,
+    "human_note": "Two rungs too senior. Worth logging as a hiring signal for outreach, not as an application."
+  },
+  {
+    "id": "merck-director-compbio",
+    "company": "Merck",
+    "title": "Director, Computational Biology",
+    "location": "Rahway, NJ",
+    "description": "Lead a department of computational scientists. PhD with 12+ years of experience and a track record of managing teams and portfolios.",
+    "human_label": 0,
+    "human_note": "Executive rung. Never."
+  },
+  {
+    "id": "illumina-sales-ae",
+    "company": "Illumina",
+    "title": "Senior Sales Account Executive",
+    "location": "New York, NY",
+    "description": "Drive revenue growth across the territory. 5+ years of sales experience in genomics or life science tools. Quota-carrying role.",
+    "human_label": 0,
+    "human_note": "Genomics vocabulary but entirely the wrong function. Good adversarial case for keyword-only matching."
+  },
+  {
+    "id": "nygc-bioinformatics-analyst",
+    "company": "New York Genome Center",
+    "title": "Bioinformatics Analyst",
+    "location": "New York, NY",
+    "description": "Support sequencing analysis for collaborating labs. BS or MS in a quantitative field with 1-3 years of experience. Familiarity with standard RNA-seq and variant pipelines.",
+    "human_label": 25,
+    "human_note": "Right place and domain but a BS/MS-level post: underleveled, underpaid, and he would read as a flight risk."
+  }
+]
