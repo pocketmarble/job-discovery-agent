@@ -276,8 +276,12 @@ SENIORITY_PATTERNS = [
     ("exec", r"\b(vice president|vp|head of|chief|director)\b"),
     ("principal", r"\b(principal|staff|distinguished|fellow \(staff\))\b"),
     ("senior", r"\bsenior\b|\bsr\.?\b|\bii+\b|\blead\b"),
-    ("entry", r"\b(associate|assistant|junior|jr\.?|\bi\b|intern|trainee|co-op)\b"),
+    ("entry", r"\b(associate|assistant|junior|jr\.?|\bi\b|intern|trainee|co-op|coordinator|specialist)\b"),
 ]
+
+# Fallback when a profile does not define ladders. Keys are the seniority
+# labels above; values are score adjustments.
+DEFAULT_LADDER = {"mid": 16, "entry": 10, "senior": 3, "principal": -28, "exec": -45}
 
 YEARS_RE = re.compile(r"(\d{1,2})\s*(?:\+|-|–|\s+to\s+)?\s*(\d{1,2})?\s*\+?\s*years", re.I)
 PHD_RE = re.compile(r"\bph\.?\s?d\.?\b|\bdoctorate\b|\bdoctoral\b", re.I)
@@ -353,33 +357,44 @@ def score_posting(job, company, profile):
     sen = detect_seniority(title)
     ladder = company.get("ladder", "startup")  # 'big_pharma' | 'startup' | 'academic' | 'agency'
     yrs = min_years_required(desc)
-    wants_phd = bool(PHD_RE.search(desc))
-    sub_doctoral = bool(SUB_DOCTORAL_RE.search(desc)) and not wants_phd
-
-    if ladder == "big_pharma":
-        ok = {"senior": 16, "mid": 13, "entry": 5, "principal": -22, "exec": -45}
-    elif ladder == "academic":
-        ok = {"mid": 16, "senior": 10, "entry": 8, "principal": -12, "exec": -40}
+    top_degree = (profile.get("top_degree") or "phd").lower()
+    if top_degree == "phd":
+        wants_phd = bool(PHD_RE.search(desc))
+        sub_doctoral = bool(SUB_DOCTORAL_RE.search(desc)) and not wants_phd
     else:
-        ok = {"mid": 16, "entry": 10, "senior": 3, "principal": -28, "exec": -45}
+        # For non-doctoral profiles a PhD requirement is the disqualifier,
+        # and there is no such thing as an under-levelled degree ask.
+        wants_phd = False
+        sub_doctoral = False
+        if PHD_RE.search(desc):
+            score -= 25
+            flags.append("Posting asks for a PhD.")
+
+    ladders = profile.get("ladders") or {}
+    ok = ladders.get(ladder) or ladders.get("default") or DEFAULT_LADDER
     score += ok.get(sen, 0)
     if sen in ("principal", "exec"):
         flags.append("Title is above your target rung (%s) — usually a wasted application." % sen)
-    elif ladder == "big_pharma" and sen == "senior":
-        reasons.append("'Senior' here is the big-pharma PhD entry rung, not a step up.")
+    elif ok.get(sen, 0) >= 12 and sen == "senior":
+        reasons.append("'Senior' is the entry rung on this employer's ladder, not a step up.")
 
+    # Years are judged relative to what this candidate can credibly claim,
+    # not against a fixed threshold — 5 years is disqualifying for a new PhD
+    # and exactly right for an eight-year manager.
+    target_years = profile.get("target_years", 2)
     if yrs is None:
         score += 5
-        reasons.append("No industry-years requirement stated.")
-    elif yrs <= 2:
+        reasons.append("No years-of-experience requirement stated.")
+    elif yrs <= target_years:
         score += 18
-        reasons.append("Asks for %d+ years — squarely a fresh-PhD spec." % yrs)
-    elif yrs <= 4:
+        reasons.append("Asks for %d+ years, within your %d — a level match." % (yrs, target_years))
+    elif yrs <= target_years + 2:
         score += 7
-        reasons.append("Asks for %d+ years — reachable, lead with publications." % yrs)
+        reasons.append("Asks for %d+ years against your %d — reachable; lead with your strongest evidence."
+                       % (yrs, target_years))
     else:
         score -= 22
-        flags.append("Asks for %d+ years of industry experience." % yrs)
+        flags.append("Asks for %d+ years of experience; you can claim about %d." % (yrs, target_years))
 
     if wants_phd:
         score += 10
@@ -711,12 +726,20 @@ def cmd_serve(args):
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
+    a = sub.add_parser("analyze", help="turn a resume into lanes, targets and scoring config")
+    a.add_argument("resume", help="path to a .pdf, .docx, .txt or .md resume")
+    a.add_argument("--location", default="", help='e.g. "Brooklyn, NY"')
+    a.add_argument("--notes", default="", help="anything the resume does not say")
+    a.add_argument("--force", action="store_true", help="overwrite without keeping .bak files")
     sub.add_parser("resolve", help="find each company's public job board")
     d = sub.add_parser("discover", help="fetch and score open roles")
     d.add_argument("--no-llm", action="store_true", help="skip the Claude scoring pass")
     s = sub.add_parser("serve", help="browse results in a local web page")
     s.add_argument("--port", type=int, default=8765)
     args = p.parse_args()
+    if args.cmd == "analyze":
+        import analyze  # noqa: PLC0415 - optional path, keeps startup light
+        return analyze.run(args)
     {"resolve": cmd_resolve, "discover": cmd_discover, "serve": cmd_serve}[args.cmd](args)
 
 

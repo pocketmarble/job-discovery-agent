@@ -1,5 +1,37 @@
 {
   "min_score": 40,
+  "top_degree": "phd",
+  "target_years": 2,
+  "ladders": {
+    "big_pharma": {
+      "senior": 16,
+      "mid": 13,
+      "entry": 5,
+      "principal": -22,
+      "exec": -45
+    },
+    "academic": {
+      "mid": 16,
+      "senior": 10,
+      "entry": 8,
+      "principal": -12,
+      "exec": -40
+    },
+    "startup": {
+      "mid": 16,
+      "entry": 10,
+      "senior": 3,
+      "principal": -28,
+      "exec": -45
+    },
+    "default": {
+      "mid": 16,
+      "entry": 10,
+      "senior": 3,
+      "principal": -28,
+      "exec": -45
+    }
+  },
   "resume_summary": "PhD candidate (defends Dec 2026), Biomedical Sciences & Public Health, Icahn School of Medicine at Mount Sinai. Decade of experience in oncology, immunology, multi-omics genomics (RNA-seq, ATAC-seq, CUT&RUN). Applied mathematics and biostatistics background; authors statistical analysis plans. Hands-on PyTorch/transformer engineering, models from scratch, GCP/AWS. 8 peer-reviewed publications including Nature Communications, Nature Cancer, Genes & Development; co-author on a community benchmark evaluating ML deconvolution methods. No prior full-time industry experience. Based in Brooklyn, NY; open to NYC metro, NJ pharma belt, and remote.",
   "skills": [
     "Python",

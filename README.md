@@ -9,21 +9,47 @@ don't want to be read.
 ## Run it
 
 ```bash
-cd jobagent
+cd job-discovery-agent
 
-python3 app.py resolve          # once: find each company's public job board
+export ANTHROPIC_API_KEY=sk-ant-...             # needed for analyze only
+python3 app.py analyze ~/resume.pdf --location "Brooklyn, NY"
+
+# read ANALYSIS.md, edit companies.json, then:
+python3 app.py resolve          # find each company's public job board
 python3 app.py discover         # fetch open roles and score them
 python3 app.py serve            # browse at http://localhost:8765
 ```
 
-Optional, for a second opinion on the shortlist:
+`analyze` reads a resume (`.pdf`, `.docx`, `.txt`, `.md`) and writes the whole
+configuration: your **lanes** (the distinct kinds of role your background sells
+into), the **seniority rules** for your field, a target **company list** with
+watch titles, plus recruiters, resources, and an honest list of your gaps. The
+prose version lands in `ANALYSIS.md`; the machine-readable version becomes
+`profile.json` and `companies.json`.
 
-```bash
-export ANTHROPIC_API_KEY=sk-ant-...
-python3 app.py discover         # adds a Claude scoring pass on the top 15
-```
+Everything after `analyze` runs with no API key. `discover` will use one if it
+finds it, to add a second scoring opinion on the shortlist; `--no-llm` skips that.
 
-Use `python3 app.py discover --no-llm` to skip that pass.
+### It is not field-specific
+
+The scoring rules are read from `profile.json`, not baked into the code, so the
+same tool works outside science. Seniority is judged against your ladder and
+your years, which is why the identical title scores differently for different
+people:
+
+| Posting | New PhD, 0 industry yrs | Marketer, 8 yrs |
+| --- | --- | --- |
+| Senior Scientist, Comp Bio (PhD, 0-2 yrs, big pharma) | **95** | 0 (wrong function) |
+| Lifecycle Marketing Manager (5-8 yrs) | 0 (wrong function) | **90** |
+| Marketing Coordinator (1-2 yrs) | — | **32** (under-levelled) |
+| Director (10+ yrs) | **0** | **0** |
+
+### Generated company lists are guesses
+
+`analyze` produces employers from a model's knowledge, so some will be
+mis-named or won't hire for this. `resolve` is the filter: a company whose
+public job board cannot be found is either wrong or not worth polling. Read
+`ANALYSIS.md` and edit `companies.json` before trusting the list.
 
 ## How it works
 
@@ -100,9 +126,11 @@ should move these numbers and say so in the commit message.
 
 | file | what it holds |
 |---|---|
-| `app.py` | everything: board clients, resolver, scorer, storage, web UI |
+| `app.py` | board clients, resolver, scorer, storage, web UI |
+| `analyze.py` | resume → lanes, ladders, targets, `ANALYSIS.md` |
 | `companies.json` | your targets, their watch titles, ladder type, board details |
-| `profile.json` | your skills, lanes, locations, exclusions, score threshold |
+| `profile.json` | your skills, lanes, ladders, years, locations, exclusions |
+| `ANALYSIS.md` | the analysis in prose — lanes, moat, level guidance, gaps |
 | `jobs.db` | SQLite; every posting ever seen, with first-seen dates |
 
 Because postings are stored with a `first_seen` date and a stable id, running

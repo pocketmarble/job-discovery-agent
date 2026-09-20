@@ -18,7 +18,8 @@ It has two audiences and both matter:
 ## Layout
 
 ```
-app.py                      everything: ATS clients, resolver, scorer, store, server
+app.py                      ATS clients, resolver, scorer, store, server
+analyze.py                  resume -> profile.json + companies.json + ANALYSIS.md
 companies.json              targets: watch titles, ladder type, resolved board
 profile.json                resume keywords, lanes, locations, exclusions, threshold
 tests/test_scoring.py       unittest suite + `--report` eval mode
@@ -46,12 +47,18 @@ python3 tests/test_scoring.py --report   # scorer vs. human labels
 These come from how scientific hiring actually works and are the heart of the
 project. Don't "simplify" them away.
 
+- **Nothing about the scoring may be field-specific.** Ladder tables, the
+  qualifying degree, years targets, lanes and exclusions all live in
+  `profile.json`; `analyze.py` generates them from a resume. If a change would
+  only make sense for scientific hiring, it belongs in the profile, not in code.
 - **Ladder type decides what a title means.** At big pharma (`ladder:
   "big_pharma"`) a fresh PhD enters at *Senior Scientist*. At a startup
   (`ladder: "startup"`) the same fresh PhD enters at *Scientist* / *Scientist I*,
   and *Senior* is a stretch. `academic` favours staff-scientist and fellow roles.
 - **Years-of-experience is the real seniority signal**, more reliable than the
-  title. 0–2 gains a lot; 5+ is disqualifying.
+  title — but it is judged against `target_years`, the candidate's own claimable
+  experience. Five years is disqualifying for a new PhD and exactly right for an
+  eight-year manager.
 - **Under-levelling is as bad as over-levelling.** A BS/MS-pitched role with no
   PhD track is a bad application, not a safe one.
 - **Four lanes** (see `profile.json`): L1 computational biology, L2 ML/techbio,
@@ -85,7 +92,10 @@ Roughly in value order:
 4. **Ablations**: rules-only vs. LLM-only vs. blended, with cost and latency per
    posting. A table of these is the centrepiece of the writeup.
 5. Change feed: `discover --since` to show only postings first seen after a date.
-6. Optional: split `app.py` into a package once it passes ~800 lines.
+6. **Pipeline view in `serve`**: save a discovered posting to an applications
+   table with a status and a next action, so the tool closes the loop instead of
+   handing off to a separate tracker.
+7. Optional: split `app.py` into a package once it passes ~800 lines.
 
 ## Writeup
 
